@@ -38,9 +38,13 @@ jQuery(document).ready(function($) {
 
     var strPageContainerOverflow = jqPageContainer.css('overflow');
     if (!strPageContainerOverflow || strPageContainerOverflow == 'visible') {
-        jqPageContainer.css('overflow', 'hidden');
-        //               ^^^^^^^^    ^^^^^^
-        //  Just set the page container CSS 'overflow' property to 'hidden' to
+        var isPageContainerBody = jqPageContainer.is('body');
+        jqPageContainer.css(
+            'overflow',
+            isPageContainerBody ? 'auto' : 'hidden');
+        //                         ^^^^     ^^^^^^
+        //  Just set the page container CSS 'overflow' property to 'auto' if
+        //  the container is the <body> tag, or to 'hidden' if otherwise, to
         //  insure that any outer vertical margins of the child elements will
         //  get included in the calculated height of the page container.
         //

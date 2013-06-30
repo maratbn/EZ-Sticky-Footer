@@ -27,6 +27,13 @@
         jQuery(document).ready(function($) {
             var jqShowHideExpander = $("<a href='#'>Show/Hide Expander</a>");
             $('.test_control_panel').append(jqShowHideExpander);
+            jqShowHideExpander.bind('click', function() {
+                    var jqExpander = $('.jq-ez-sticky-footer-expander')
+                    var strVisibility = jqExpander.css('visibility');
+                    jqExpander.css(
+                        'visibility',
+                        strVisibility == 'hidden' ? "" : 'hidden');
+                });
         });
     </script>
   </body>

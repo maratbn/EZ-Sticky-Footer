@@ -46,8 +46,8 @@
 
             var jqAppendRandomContent = $("<a href='#'>Append Random Content</a>");
             jqTCP.append(jqAppendRandomContent);
-            jqShowHideExpander.bind('click', function() {
-
+            jqAppendRandomContent.bind('click', function() {
+                    jqTCP.after('<p>test</p>');
                 });
         });
     </script>

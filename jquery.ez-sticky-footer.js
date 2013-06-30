@@ -31,7 +31,7 @@
  *  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-jQuery(document).ready(function($) {
+(function($) {
     var jqWindow = $(window);
     var jqPageContainer = $('.jq-ez-sticky-footer-page-container');
     var jqContentExpander = $('.jq-ez-sticky-footer-expander');
@@ -77,4 +77,4 @@ jQuery(document).ready(function($) {
             adjustExpander();
             heightContainerLast = jqPageContainer.outerHeight(true);
         });
-});
+})(jQuery);

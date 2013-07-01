@@ -1,0 +1,18 @@
+                        EZ-Sticky-Footer jQuery plugin
+
+     jQuery plugin to make the page footer stick to the bottom of the page.
+
+    Copyright (c) 2013 Marat Nepomnyashy   http://maratbn.com  maratbn@gmail
+
+                              Licensed under BSD
+
+
+    * No numeric configuration /w arbitrary footer / content height.
+
+    * No absolute or relative positioning.
+
+    * No other funky CSS tricks and hacks, infact no CSS required.
+
+    * Works on IE6+.
+
+    * Works on the default Android Browser.

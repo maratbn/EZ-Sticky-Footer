@@ -34,6 +34,7 @@
 (function($) {
     var jqWindow = $(window);
     var jqPageContainer = $('.jq-ez-sticky-footer-page-container');
+    var jqPageFooter = $('.jq-ez-sticky-footer-page-footer');
     var jqContentExpander = $('.jq-ez-sticky-footer-expander');
 
     var strPageContainerOverflow = jqPageContainer.css('overflow');
@@ -71,10 +72,14 @@
 
     var heightContainerLast = null;
 
-    jqPageContainer.bind('DOMSubtreeModified', function() {
-            if (jqPageContainer.outerHeight(true) == heightContainerLast) return;
+    function adjustExpanderIfNecessary() {
+        if (jqPageContainer.outerHeight(true) == heightContainerLast) return;
 
-            adjustExpander();
-            heightContainerLast = jqPageContainer.outerHeight(true);
-        });
+        adjustExpander();
+        heightContainerLast = jqPageContainer.outerHeight(true);
+    }
+
+    jqPageContainer.bind('DOMSubtreeModified', adjustExpanderIfNecessary);
+    jqPageFooter.bind('DOMSubtreeModified', adjustExpanderIfNecessary);
+
 })(jQuery);

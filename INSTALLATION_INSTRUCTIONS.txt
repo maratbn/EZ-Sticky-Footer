@@ -68,7 +68,8 @@
             (3) The expander <div> must be completely empty.
 
     (5) Test the page with the plugin deployed.  If the plugin does not seem
-        to work correctly, please file a bug report at
+        to work correctly, please file a bug report at:
+
         https://github.com/maratbn/EZ-Sticky-Footer/issues
 
         When filing a bug report, please make sure to state the browser you're

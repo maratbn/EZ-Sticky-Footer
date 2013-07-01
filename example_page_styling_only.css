@@ -11,6 +11,9 @@ body {
     margin: 17;     /* Testing out non-default body margin. */
 }
 
+.my_header_xyz {
+    background-color: #fc7;
+}
 .jq-ez-sticky-footer-page-container {
     background-color: #cfe;
 }

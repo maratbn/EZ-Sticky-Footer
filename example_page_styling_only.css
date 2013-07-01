@@ -22,5 +22,7 @@ body {
 }
 .jq-ez-sticky-footer-page-footer {
     background-color: #ecf;
+}
+.emphasize_footer {
     border: solid 2px #f00;
 }

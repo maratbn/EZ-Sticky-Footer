@@ -37,22 +37,11 @@
     var jqPageFooter = $('.jq-ez-sticky-footer-page-footer');
     var jqContentExpander = $('.jq-ez-sticky-footer-expander');
 
-    var strPageContainerOverflow = jqPageContainer.css('overflow');
-    if (!strPageContainerOverflow || strPageContainerOverflow == 'visible') {
-        var isPageContainerBody = jqPageContainer.is('body');
-        jqPageContainer.css(
-            'overflow',
-            isPageContainerBody ? 'auto' : 'hidden');
-        //                         ^^^^     ^^^^^^
-        //  Just set the page container CSS 'overflow' property to 'auto' if
-        //  the container is the <body> tag, or to 'hidden' if otherwise, to
-        //  insure that any outer vertical margins of the child elements will
-        //  get included in the calculated height of the page container.
-        //
-        //  Overflow value of 'auto' will also work.
-        //
-        //  http://stackoverflow.com/questions/1762539/margin-on-child-element-moves-parent-element
-    }
+    //  The following setting of self-cancelling margin and padding onto the
+    //  page container is to make sure that it entirely covers any margins of
+    //  its child components within its height.
+    jqPageContainer.css('padding', '1px 0');
+    jqPageContainer.css('margin', '-1px 0');
 
     function adjustExpander() {
         var heightPageContainer = jqPageContainer.outerHeight(true);

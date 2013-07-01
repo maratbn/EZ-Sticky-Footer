@@ -9,15 +9,17 @@
                               Licensed under BSD
 
 
-    * No numeric configuration /w arbitrary footer / content height.
+    JavaScript-based solution for a non-trival CSS problem.
 
-    * No absolute or relative positioning.
+        * No numeric configuration /w arbitrary footer / content height.
 
-    * No other funky CSS tricks and hacks, infact no CSS required.
+        * No absolute or relative positioning.
 
-    * Works on IE6+.
+        * No other funky CSS tricks and hacks, infact no CSS required.
 
-    * Works on the default Android Browser.
+        * Works on IE6+.
+
+        * Works on the default Android Browser.
 
 
     The plugin requires that several <div>s (or any other tags that are

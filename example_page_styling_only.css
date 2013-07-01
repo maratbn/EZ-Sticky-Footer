@@ -1,0 +1,17 @@
+/**
+ *  The CSS here is just for styling the EZ-Sticky-Footer example page, and
+ *  not for any specific configuration or functionality in the plugin.
+ *
+ *  The EZ-Sticky-Footer plugin does not require any CSS styles to function,
+ *  and this CSS file should not be included in any actual deployment.
+ */
+
+.jq-ez-sticky-footer-page-container {
+    background-color: #cfe;
+}
+.jq-ez-sticky-footer-expander {
+    background-color: #fec;
+}
+.jq-ez-sticky-footer-page-footer {
+    background-color: #ecf;
+}

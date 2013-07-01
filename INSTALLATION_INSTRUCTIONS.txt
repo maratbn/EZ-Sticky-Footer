@@ -1,0 +1,70 @@
+                        EZ-Sticky-Footer jQuery plugin
+
+     jQuery plugin to make the page footer stick to the bottom of the page.
+
+                 https://github.com/maratbn/EZ-Sticky-Footer
+
+                          INSTALLATION INSTRUCTIONS
+
+    (1) Test the plugin by opening 'example.html', and varying the height of
+        the browser window.  The footer <div> should always be at the bottom
+        of the page.  When there is not enough page content to meet the
+        footer, the footer should still remain attached to the bottom of the
+        browser viewport, and not be cut-off or require any scrolling to see
+        it.
+
+    (2) Upload all the plugin files to a web server.  Test 'example.html' on
+        the server.  Use the example file as a template for deploying inside
+        another page.
+
+    (3) To deploy inside any webpage, it is necessary to load the
+        'jquery.ez-sticky-footer.js' file after loading the main jQuery
+        JavaScript file.  So insert a <script> tag for
+        'jquery.ez-sticky-footer.js' below the <script> tag for jQuery.
+
+    (4) The plugin requires that several <div>s (or any other tags that are
+        displayed in block mode) be designated as:
+
+            (1) Main page container <div>
+            (2) The content expander <div>
+            (3) The page footer <div>
+
+        The <div>s are designated by assigning them special CSS class names
+        according to the following table:
+
+        role                            CSS class name to assign
+        ----                            ------------------------
+        page container                  jq-ez-sticky-footer-page-container
+        content expander                jq-ez-sticky-footer-expander
+        page footer                     jq-ez-sticky-footer-page-footer
+
+        The structure of the page must be the following:
+
+        <body>
+          <div class='jq-ez-sticky-footer-page-container'>
+            <div>your header (does not need any CSS class)</div>
+            <div>
+              ...
+              your content (does not need any CSS class)
+              ...
+              <div class='jq-ez-sticky-footer-expander'></div>
+            </div>
+            <div class='jq-ez-sticky-footer-page-footer'>
+              your footer
+            </div>
+          </div>
+        </body>
+
+        Important:
+
+            (1) The expander <div> must be inside the page content <div>.
+            (2) The expander <div> must be completely empty.
+
+    (5) Test the page with the plugin deployed.  If the plugin does not seem
+        to work correctly, please file a bug report at
+        https://github.com/maratbn/EZ-Sticky-Footer/issues
+
+        When filing a bug report, please make sure to state the browser you're
+        using, and to include links to 'example.html' on your webserver, as
+        well as the page on which the plugin is deployed but does not seem to
+        be working.

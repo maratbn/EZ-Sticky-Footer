@@ -33,6 +33,7 @@
 
 (function($) {
     var jqWindow = $(window);
+    var jqBody = $('body');
     var jqPageContainer = $('.jq-ez-sticky-footer-page-container');
     var jqPageFooter = $('.jq-ez-sticky-footer-page-footer');
     var jqContentExpander = $('.jq-ez-sticky-footer-expander');
@@ -48,9 +49,15 @@
         var heightExpander = jqContentExpander.height();
         var heightContainerNoExpander = heightPageContainer - heightExpander;
 
-        var deltaHeight = jqWindow.height() - heightContainerNoExpander;
+        var heightExpanderNew = 0;
+        if (heightContainerNoExpander < jqWindow.height()) {
+            var heightDeltaBody = jqBody.outerHeight(true) -
+                                                          heightPageContainer;
+            heightExpanderNew = jqWindow.height() - heightContainerNoExpander
+                                                            - heightDeltaBody;
+        }
 
-        jqContentExpander.height(deltaHeight > 0 ? deltaHeight : 0);
+        jqContentExpander.height(heightExpanderNew);
     }
 
     adjustExpander();

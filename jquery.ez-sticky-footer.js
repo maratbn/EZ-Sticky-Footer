@@ -78,4 +78,13 @@
     jqPageContainer.bind('DOMSubtreeModified', adjustExpanderIfNecessary);
     jqPageFooter.bind('DOMSubtreeModified', adjustExpanderIfNecessary);
 
+    //  Adjusting the expander after the document is loaded as well as after
+    //  it's completely ready just in case any DOM change effecting the layout
+    //  was missed.
+    $(document).load(function() {
+            adjustExpanderIfNecessary();
+        });
+    $(document).ready(function() {
+            adjustExpanderIfNecessary();
+        });
 })(jQuery);

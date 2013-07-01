@@ -55,11 +55,11 @@
 
     Important:
 
-        (1) The container <div> used for the plugin should not have any
-            customized margin or padding styles applied to it, as the
-            plugin needs to manipulate these settings for it to work.
-            If needed by the page, these settings can still be specified
-            in a nested <div>.
+        (1) The container <div> designated for use by the plugin should
+            not have any customized margin or padding styles applied to
+            it, as the plugin needs to manipulate these settings for it to
+            work.  If needed by the page, these settings can still be
+            specified in a nested <div>.
         (2) The expander <div> must be inside the page content <div>.
         (3) The expander <div> must be completely empty.
 

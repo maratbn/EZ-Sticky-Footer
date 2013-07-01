@@ -47,9 +47,9 @@
 
             jqTCP.append("&nbsp;&nbsp;&nbsp;");
 
-            var jqAppendRandomContent = $("<a href='#'>Append line to content</a>");
-            jqTCP.append(jqAppendRandomContent);
-            jqAppendRandomContent.bind('click', function() {
+            var jqAppendLineToContent = $("<a href='#'>Append line to content</a>");
+            jqTCP.append(jqAppendLineToContent);
+            jqAppendLineToContent.bind('click', function() {
                     jqTCP.after('<p>test</p>');
                 });
         });

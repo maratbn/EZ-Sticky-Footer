@@ -7,6 +7,10 @@
  *  and this CSS file should not be included in any actual deployment.
  */
 
+body {
+    margin: 17;     /* Testing out non-default body margin. */
+}
+
 .jq-ez-sticky-footer-page-container {
     background-color: #cfe;
 }

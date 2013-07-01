@@ -55,10 +55,17 @@
           </div>
         </body>
 
+        Assign the class names to the <div>s accordingly.
+
         Important:
 
-            (1) The expander <div> must be inside the page content <div>.
-            (2) The expander <div> must be completely empty.
+            (1) The container <div> used for the plugin should not have any
+                customized margin or padding styles applied to it, as the
+                plugin needs to manipulate these settings for it to work.
+                If needed by the page, these settings can still be specified
+                in a nested <div>.
+            (2) The expander <div> must be inside the page content <div>.
+            (3) The expander <div> must be completely empty.
 
     (5) Test the page with the plugin deployed.  If the plugin does not seem
         to work correctly, please file a bug report at

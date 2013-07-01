@@ -11,7 +11,8 @@
 
     JavaScript-based solution for a non-trival CSS problem.
 
-        * No numeric configuration /w arbitrary footer / content height.
+        * No numeric configuration with dynamically-changing and arbitrary
+          footer / content areas heights.
 
         * No absolute or relative positioning.
 

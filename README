@@ -18,3 +18,58 @@
     * Works on IE6+.
 
     * Works on the default Android Browser.
+
+
+    The plugin requires that several <div>s (or any other tags that are
+    displayed in block mode) be designated as:
+
+        (1) Main page container <div>
+        (2) The content expander <div>
+        (3) The page footer <div>
+
+    The <div>s are designated by assigning them special CSS class names
+    according to the following table:
+
+    role                            CSS class name to assign
+    ----                            ------------------------
+    page container                  jq-ez-sticky-footer-page-container
+    content expander                jq-ez-sticky-footer-expander
+    page footer                     jq-ez-sticky-footer-page-footer
+
+    The structure of the page must be the following:
+
+    <body>
+      <div class='jq-ez-sticky-footer-page-container'>
+        <div>your header (does not need any CSS class)</div>
+        <div>
+          ...
+          your content (does not need any CSS class)
+          ...
+          <div class='jq-ez-sticky-footer-expander'></div>
+        </div>
+        <div class='jq-ez-sticky-footer-page-footer'>
+          your footer
+        </div>
+      </div>
+    </body>
+
+    Important:
+
+        (1) The container <div> used for the plugin should not have any
+            customized margin or padding styles applied to it, as the
+            plugin needs to manipulate these settings for it to work.
+            If needed by the page, these settings can still be specified
+            in a nested <div>.
+        (2) The expander <div> must be inside the page content <div>.
+        (3) The expander <div> must be completely empty.
+
+
+    If the plugin does not seem to work correctly, please file a bug report
+    at:
+
+        https://github.com/maratbn/EZ-Sticky-Footer/issues
+
+    When filing a bug report, please make sure to state the browser you're
+    using, and to include links to 'example.html' on your webserver, as
+    well as the page on which the plugin is deployed but does not seem to
+    be working.

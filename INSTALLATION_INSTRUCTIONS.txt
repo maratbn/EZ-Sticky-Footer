@@ -4,6 +4,8 @@
 
                  https://github.com/maratbn/EZ-Sticky-Footer
 
+                                Version RELEASE_EZ-Sticky-Footer
+
                           INSTALLATION INSTRUCTIONS
 
     (1) Test the plugin by opening 'example.html', and varying the height of

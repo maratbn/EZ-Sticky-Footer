@@ -15,7 +15,7 @@
         Content &lt;div&gt;.
         <div class='test_control_panel'>
         </div>
-        <div class='jq-ez-sticky-footer-expander'>
+        <div class='jq-ez-sticky-footer-content-expander'>
           Expander &lt;div&gt;
           (Must be completely empty in a real deployment.)
         </div>
@@ -38,7 +38,7 @@
             var jqShowHideExpander = $("<a href='#'>Show / hide expander</a>");
             jqTCP.append(jqShowHideExpander);
             jqShowHideExpander.bind('click', function() {
-                    var jqExpander = $('.jq-ez-sticky-footer-expander')
+                    var jqExpander = $('.jq-ez-sticky-footer-content-expander')
                     var strVisibility = jqExpander.css('visibility');
                     jqExpander.css(
                         'visibility',

@@ -36,7 +36,7 @@
     role                            CSS class name to assign
     ----                            ------------------------
     page container                  jq-ez-sticky-footer-page-container
-    content expander                jq-ez-sticky-footer-expander
+    content expander                jq-ez-sticky-footer-content-expander
     page footer                     jq-ez-sticky-footer-page-footer
 
     The structure of the page must be the following:
@@ -48,7 +48,7 @@
           ...
           your content (does not need any CSS class)
           ...
-          <div class='jq-ez-sticky-footer-expander'></div>
+          <div class='jq-ez-sticky-footer-content-expander'></div>
         </div>
         <div class='jq-ez-sticky-footer-page-footer'>
           your footer

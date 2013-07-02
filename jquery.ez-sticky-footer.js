@@ -38,7 +38,7 @@
     var jqBody = $('body');
     var jqPageContainer = $('.jq-ez-sticky-footer-page-container');
     var jqPageFooter = $('.jq-ez-sticky-footer-page-footer');
-    var jqContentExpander = $('.jq-ez-sticky-footer-expander');
+    var jqContentExpander = $('.jq-ez-sticky-footer-content-expander');
 
     //  The following setting of self-cancelling margin and padding onto the
     //  page container is to make sure that it entirely covers any margins of

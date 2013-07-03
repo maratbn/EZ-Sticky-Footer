@@ -18,6 +18,6 @@
     "keywords": ["footer", "sticky", "bottom", "layout"],
     "homepage": "https://github.com/maratbn/EZ-Sticky-Footer",
     "docs": "https://raw.github.com/maratbn/EZ-Sticky-Footer/release--0.0.1/INSTALLATION_INSTRUCTIONS.txt",
-    "demo": "http://ez-sticky-footer-demo.github.com/example.html",
+    "demo": "http://maratbn.com/misc/ez-sticky-footer-demo/example.html",
     "bugs": "https://github.com/maratbn/EZ-Sticky-Footer/issues"
 }

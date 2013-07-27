@@ -35,13 +35,23 @@
 
 (function($) {
     var jqWindow = $(window);
+    var jqHtml = $('html');
     var jqBody = $('body');
     var jqPageContainer = $('.jq-ez-sticky-footer-page-container');
     var jqPageFooter = $('.jq-ez-sticky-footer-page-footer');
     var jqContentExpander = $('.jq-ez-sticky-footer-content-expander');
 
     function _getPageHeight() {
-        return jqBody.outerHeight(true);
+
+        function _getHtmlMargins() {
+            function _convertMargin(strMargin) {
+                return 1 * strMargin.replace('px', "");
+            }
+            return _convertMargin(jqHtml.css('margin-top')) +
+                                  _convertMargin(jqHtml.css('margin-bottom'));
+        }
+
+        return _getHtmlMargins() + jqBody.outerHeight(true);
     }
 
     //  The following setting of self-cancelling margin and padding onto the

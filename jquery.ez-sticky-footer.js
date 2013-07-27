@@ -71,13 +71,13 @@
             _adjustExpander();
         });
 
-    var heightBodyLast = null;
+    var heightPageLast = null;
 
     function _adjustExpanderIfNecessary() {
-        if (_getPageHeight() == heightBodyLast) return;
+        if (_getPageHeight() == heightPageLast) return;
 
         _adjustExpander();
-        heightBodyLast = _getPageHeight();
+        heightPageLast = _getPageHeight();
     }
 
     jqPageContainer.bind('DOMSubtreeModified', _adjustExpanderIfNecessary);

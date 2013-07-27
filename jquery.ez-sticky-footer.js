@@ -40,6 +40,10 @@
     var jqPageFooter = $('.jq-ez-sticky-footer-page-footer');
     var jqContentExpander = $('.jq-ez-sticky-footer-content-expander');
 
+    function _getPageHeight() {
+        return jqBody.outerHeight(true);
+    }
+
     //  The following setting of self-cancelling margin and padding onto the
     //  page container is to make sure that it entirely covers any margins of
     //  its child components within its height.
@@ -53,8 +57,7 @@
 
         var heightExpanderNew = 0;
         if (heightContainerNoExpander < jqWindow.height()) {
-            var heightDeltaBody = jqBody.outerHeight(true) -
-                                                          heightPageContainer;
+            var heightDeltaBody = _getPageHeight() - heightPageContainer;
             heightExpanderNew = jqWindow.height() - heightContainerNoExpander
                                                             - heightDeltaBody;
         }
@@ -71,10 +74,10 @@
     var heightBodyLast = null;
 
     function _adjustExpanderIfNecessary() {
-        if (jqBody.outerHeight(true) == heightBodyLast) return;
+        if (_getPageHeight() == heightBodyLast) return;
 
         _adjustExpander();
-        heightBodyLast = jqBody.outerHeight(true);
+        heightBodyLast = _getPageHeight();
     }
 
     jqPageContainer.bind('DOMSubtreeModified', _adjustExpanderIfNecessary);

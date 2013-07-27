@@ -92,8 +92,7 @@
         heightPageLast = _getPageHeight();
     }
 
-    jqPageContainer.bind('DOMSubtreeModified', _adjustExpanderIfNecessary);
-    jqPageFooter.bind('DOMSubtreeModified', _adjustExpanderIfNecessary);
+    jqWindow.bind('DOMSubtreeModified', _adjustExpanderIfNecessary);
 
     //  Adjusting the expander after the document is loaded as well as after
     //  it's completely ready just in case any DOM change effecting the layout

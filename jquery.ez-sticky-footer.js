@@ -37,10 +37,26 @@
 
 (function($) {
     var jqWindow = $(window);
+    var jqHtml = $('html');
     var jqBody = $('body');
     var jqPageContainer = $('.jq-ez-sticky-footer-page-container');
     var jqPageFooter = $('.jq-ez-sticky-footer-page-footer');
     var jqContentExpander = $('.jq-ez-sticky-footer-content-expander');
+
+    function _getPageHeight() {
+
+        function _getHtmlMargins() {
+            function _toNum(strMargin) {
+                return 1 * strMargin.replace('px', "");
+            }
+            return _toNum(jqHtml.css('margin-top')) +
+                    _toNum(jqHtml.css('margin-bottom')) +
+                    _toNum(jqHtml.css('padding-top')) +
+                    _toNum(jqHtml.css('padding-bottom'));
+        }
+
+        return _getHtmlMargins() + jqBody.outerHeight(true);
+    }
 
     //  The following setting of self-cancelling margin and padding onto the
     //  page container is to make sure that it entirely covers any margins of
@@ -48,15 +64,14 @@
     jqPageContainer.css('padding', '1px 0');
     jqPageContainer.css('margin', '-1px 0');
 
-    function adjustExpander() {
+    function _adjustExpander() {
         var heightPageContainer = jqPageContainer.outerHeight(true);
         var heightExpander = jqContentExpander.height();
         var heightContainerNoExpander = heightPageContainer - heightExpander;
 
         var heightExpanderNew = 0;
         if (heightContainerNoExpander < jqWindow.height()) {
-            var heightDeltaBody = jqBody.outerHeight(true) -
-                                                          heightPageContainer;
+            var heightDeltaBody = _getPageHeight() - heightPageContainer;
             heightExpanderNew = jqWindow.height() - heightContainerNoExpander
                                                             - heightDeltaBody;
         }
@@ -64,31 +79,30 @@
         jqContentExpander.height(heightExpanderNew);
     }
 
-    adjustExpander();
+    _adjustExpander();
 
     jqWindow.bind('resize', function() {
-            adjustExpander();
+            _adjustExpander();
         });
 
-    var heightBodyLast = null;
+    var heightPageLast = null;
 
-    function adjustExpanderIfNecessary() {
-        if (jqBody.outerHeight(true) == heightBodyLast) return;
+    function _adjustExpanderIfNecessary() {
+        if (_getPageHeight() == heightPageLast) return;
 
-        adjustExpander();
-        heightBodyLast = jqBody.outerHeight(true);
+        _adjustExpander();
+        heightPageLast = _getPageHeight();
     }
 
-    jqPageContainer.bind('DOMSubtreeModified', adjustExpanderIfNecessary);
-    jqPageFooter.bind('DOMSubtreeModified', adjustExpanderIfNecessary);
+    jqWindow.bind('DOMSubtreeModified', _adjustExpanderIfNecessary);
 
     //  Adjusting the expander after the document is loaded as well as after
     //  it's completely ready just in case any DOM change effecting the layout
     //  was missed.
     $(document).load(function() {
-            adjustExpanderIfNecessary();
+            _adjustExpanderIfNecessary();
         });
     $(document).ready(function() {
-            adjustExpanderIfNecessary();
+            _adjustExpanderIfNecessary();
         });
 })(jQuery);

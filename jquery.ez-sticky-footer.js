@@ -48,7 +48,9 @@
                 return 1 * strMargin.replace('px', "");
             }
             return _toNum(jqHtml.css('margin-top')) +
-                                          _toNum(jqHtml.css('margin-bottom'));
+                    _toNum(jqHtml.css('margin-bottom')) +
+                    _toNum(jqHtml.css('padding-top')) +
+                    _toNum(jqHtml.css('padding-bottom'));
         }
 
         return _getHtmlMargins() + jqBody.outerHeight(true);

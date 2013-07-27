@@ -46,7 +46,7 @@
     jqPageContainer.css('padding', '1px 0');
     jqPageContainer.css('margin', '-1px 0');
 
-    function adjustExpander() {
+    function _adjustExpander() {
         var heightPageContainer = jqPageContainer.outerHeight(true);
         var heightExpander = jqContentExpander.height();
         var heightContainerNoExpander = heightPageContainer - heightExpander;
@@ -62,10 +62,10 @@
         jqContentExpander.height(heightExpanderNew);
     }
 
-    adjustExpander();
+    _adjustExpander();
 
     jqWindow.bind('resize', function() {
-            adjustExpander();
+            _adjustExpander();
         });
 
     var heightBodyLast = null;
@@ -73,7 +73,7 @@
     function adjustExpanderIfNecessary() {
         if (jqBody.outerHeight(true) == heightBodyLast) return;
 
-        adjustExpander();
+        _adjustExpander();
         heightBodyLast = jqBody.outerHeight(true);
     }
 

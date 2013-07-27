@@ -14,7 +14,7 @@
     "dependencies": {
             "jquery": ">=1.3.2"
         },
-    "description": "Makes the page footer stick to the bottom of the page.",
+    "description": "Makes the page footer stick to the bottom of the page.\n\nUse the command 'curl -OLJ <download url>' to download via console.",
     "keywords": ["footer", "sticky", "bottom", "layout"],
     "homepage": "https://github.com/maratbn/EZ-Sticky-Footer",
     "docs": "https://raw.github.com/maratbn/EZ-Sticky-Footer/release--0.0.2/INSTALLATION_INSTRUCTIONS.txt",

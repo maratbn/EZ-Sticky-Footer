@@ -70,23 +70,23 @@
 
     var heightBodyLast = null;
 
-    function adjustExpanderIfNecessary() {
+    function _adjustExpanderIfNecessary() {
         if (jqBody.outerHeight(true) == heightBodyLast) return;
 
         _adjustExpander();
         heightBodyLast = jqBody.outerHeight(true);
     }
 
-    jqPageContainer.bind('DOMSubtreeModified', adjustExpanderIfNecessary);
-    jqPageFooter.bind('DOMSubtreeModified', adjustExpanderIfNecessary);
+    jqPageContainer.bind('DOMSubtreeModified', _adjustExpanderIfNecessary);
+    jqPageFooter.bind('DOMSubtreeModified', _adjustExpanderIfNecessary);
 
     //  Adjusting the expander after the document is loaded as well as after
     //  it's completely ready just in case any DOM change effecting the layout
     //  was missed.
     $(document).load(function() {
-            adjustExpanderIfNecessary();
+            _adjustExpanderIfNecessary();
         });
     $(document).ready(function() {
-            adjustExpanderIfNecessary();
+            _adjustExpanderIfNecessary();
         });
 })(jQuery);

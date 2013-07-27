@@ -4,7 +4,7 @@
  *
  *  https://github.com/maratbn/EZ-Sticky-Footer
  *
- *  Version:        RELEASE_EZ-Sticky-Footer
+ *  Version:        0.0.2
  *
  *  Module:         jquery.ez-sticky-footer.js
  *

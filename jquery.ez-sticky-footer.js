@@ -44,11 +44,11 @@
     function _getPageHeight() {
 
         function _getHtmlMargins() {
-            function _convertMargin(strMargin) {
+            function _toNum(strMargin) {
                 return 1 * strMargin.replace('px', "");
             }
-            return _convertMargin(jqHtml.css('margin-top')) +
-                                  _convertMargin(jqHtml.css('margin-bottom'));
+            return _toNum(jqHtml.css('margin-top')) +
+                                          _toNum(jqHtml.css('margin-bottom'));
         }
 
         return _getHtmlMargins() + jqBody.outerHeight(true);

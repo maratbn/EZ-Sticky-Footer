@@ -1,3 +1,5 @@
+2014-11-02  Version 0.1.0
+
     Fixed Issue #3: Need to add support for loading 'jquery.ez-sticky-footer.js' from the < head>
                     as well
                     https://github.com/maratbn/EZ-Sticky-Footer/issues/3

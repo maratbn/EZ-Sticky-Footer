@@ -99,6 +99,11 @@
             jqWindow.bind('DOMSubtreeModified', _adjustExpanderIfNecessary);
 
             _adjustExpanderIfNecessary();
+
+            if (!$.ezsf) $.ezsf = {
+                    adjustExpander:             function() {_adjustExpander();},
+                    adjustExpanderIfNecessary:  function() {_adjustExpanderIfNecessary();}
+                };
         });
 
     //  Adjusting the expander after the document is loaded as well just in case any DOM change

@@ -69,6 +69,22 @@
                     $('.jq-ez-sticky-footer-page-footer').toggleClass(
                                                           'emphasize_footer');
                 });
+
+            jqTCP.append("&nbsp;&nbsp;&nbsp;");
+
+            var jqAdjustExpander = $("<a href='#'>Manually adjust expander now</a>");
+            jqTCP.append(jqAdjustExpander);
+            jqAdjustExpander.bind('click', function() {
+                    $.ezsf.adjustExpander();
+                });
+
+            jqTCP.append("&nbsp;&nbsp;&nbsp;");
+
+            var jqAdjustExpanderIfNecessary = $("<a href='#'>Manually adjust expander now if necessary</a>");
+            jqTCP.append(jqAdjustExpanderIfNecessary);
+            jqAdjustExpanderIfNecessary.bind('click', function() {
+                    $.ezsf.adjustExpanderIfNecessary();
+                });
         });
     </script>
   </body>

@@ -11,7 +11,7 @@
  *
  *  Description:    The JavaScript file for the EZ-Sticky-Footer plugin.
  *
- *  Copyright (c) 2013 Marat Nepomnyashy  http://maratbn.com  maratbn@gmail
+ *  Copyright (c) 2013-2014 Marat Nepomnyashy  http://maratbn.com  maratbn@gmail
  *
  *  Redistribution and use in source and binary forms, with or without
  *  modification, are permitted provided that the following conditions are met:

@@ -1,0 +1,16 @@
+    Fixed Issue #3: Need to add support for loading 'jquery.ez-sticky-footer.js' from the < head>
+                    as well
+                    https://github.com/maratbn/EZ-Sticky-Footer/issues/3
+
+    Making methods '$.ezsf.adjustExpander()' and '$.ezsf.adjustExpanderIfNecessary()' available in
+    the DOM.
+
+
+2013-07-26  Version 0.0.2
+
+    Added support for margins and padding on the root <html> element.
+
+
+2013-07-02  Version 0.0.1
+
+    Initial release.

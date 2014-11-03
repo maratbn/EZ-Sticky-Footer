@@ -14,11 +14,7 @@
     "dependencies": {
             "jquery": ">=1.3.2"
         },
-    "description": "Makes the page footer stick to the bottom of the page, with " + 
-                   "dynamically-changing and arbitrary footer / content areas heights, no " +
-                   "numeric configuration, no absolute or relative positioning, and no external " +
-                   "CSS required.  Works on mobile too, even the default Android Browser.  " +
-                   "Use the command 'curl -OLJ <download url>' to download via console.",
+    "description": "Makes the page footer stick to the bottom of the page, with dynamically-changing and arbitrary footer / content areas heights, no numeric configuration, no absolute or relative positioning, and no external CSS required.  Works on mobile too, even the default Android Browser.  Use the command 'curl -OLJ <download url>' to download via console.",
     "keywords": ["footer", "sticky", "bottom", "layout"],
     "homepage": "https://github.com/maratbn/EZ-Sticky-Footer",
     "docs": "https://raw.github.com/maratbn/EZ-Sticky-Footer/README",

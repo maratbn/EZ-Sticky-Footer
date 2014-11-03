@@ -3,6 +3,7 @@
  *                      bottom of the page.
  *
  *  https://github.com/maratbn/EZ-Sticky-Footer
+ *  https://plugins.jquery.com/ez-sticky-footer
  *
  *  Version:        0.0.2-development_unreleased
  *

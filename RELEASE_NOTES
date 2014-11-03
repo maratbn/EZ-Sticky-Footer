@@ -1,3 +1,5 @@
+    Fixed up package manifest file to make it adhere to the JSON standard.
+
 2014-11-02  Version 0.1.0
 
     Fixed Issue #3: Need to add support for loading 'jquery.ez-sticky-footer.js' from the < head>

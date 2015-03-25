@@ -2,8 +2,8 @@
  *  EZ-Sticky-Footer -- jQuery plugin to make the page footer stick to the
  *                      bottom of the page.
  *
- *  https://github.com/maratbn/EZ-Sticky-Footer
- *  https://plugins.jquery.com/ez-sticky-footer
+ *  Project URLs:   https://github.com/maratbn/EZ-Sticky-Footer
+ *                  https://plugins.jquery.com/ez-sticky-footer
  *
  *  Version:        0.1.2-development_unreleased
  *

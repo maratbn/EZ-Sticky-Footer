@@ -8,7 +8,7 @@
  *
  *  Demo URL:       http://www.maratbn.com/misc/ez-sticky-footer-demo/example.html
  *
- *  Version:        0.1.2-development_unreleased
+ *  Version:        0.1.3-development_unreleased
  *
  *  Module:         jquery.ez-sticky-footer.js
  *

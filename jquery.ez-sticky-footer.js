@@ -96,9 +96,19 @@
                 heightPageLast = _getPageHeight();
             }
 
-            jqWindow.bind('DOMSubtreeModified', _adjustExpanderIfNecessary);
-
             _adjustExpanderIfNecessary();
+
+            var flagAdjustingExpander = false;
+
+            jqWindow.bind('DOMSubtreeModified', function() {
+                    if (flagAdjustingExpander) return;
+
+                    flagAdjustingExpander = true;
+
+                    _adjustExpanderIfNecessary()
+
+                    flagAdjustingExpander = false;
+                });
 
             if (!$.ezsf) $.ezsf = {
                     adjustExpander:             function() {_adjustExpander();},

@@ -27,7 +27,7 @@
         * Works on the default Android Browser.
 
 
-    The plugin requires that several <div>s (or any other tags that are
+    The plugin requires that 3 special <div>s (or any other tags that are
     displayed in block mode) be designated as:
 
         (1) Main page container <div>

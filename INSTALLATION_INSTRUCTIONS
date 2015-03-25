@@ -25,7 +25,7 @@
         JavaScript file.  So insert a <script> tag for
         'jquery.ez-sticky-footer.js' below the <script> tag for jQuery.
 
-    (4) The plugin requires that several <div>s (or any other tags that are
+    (4) The plugin requires that 3 special <div>s (or any other tags that are
         displayed in block mode) be designated as:
 
             (1) Main page container <div>
